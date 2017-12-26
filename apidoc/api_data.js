@@ -14,7 +14,14 @@ define({ "api": [
             "type": "user_name",
             "optional": false,
             "field": "user",
-            "description": "<p>name user name description</p>"
+            "description": "<p>name username no</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "password",
+            "optional": false,
+            "field": "password",
+            "description": "<p>password no</p>"
           }
         ]
       },
@@ -43,6 +50,58 @@ define({ "api": [
           "title": "Success-Response:",
           "content": "{\n    status : 'success',\n    data: null\n}",
           "type": "type"
+        }
+      ]
+    },
+    "filename": "myapp/apidoc/user.js",
+    "groupTitle": "users"
+  },
+  {
+    "type": "Logout",
+    "url": "/api/auth/logout",
+    "title": "Logout Api",
+    "name": "logout_api",
+    "group": "users",
+    "version": "1.0.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "string",
+            "optional": false,
+            "field": "access_token",
+            "description": "<p>token</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "200": [
+          {
+            "group": "200",
+            "type": "Object",
+            "optional": false,
+            "field": "das",
+            "description": "<p>no</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    status : 'success',\n    data:null\n}",
+          "type": "Object"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "{\n  status:'error',\n  error:'Ngu k chiu dc'\n}",
+          "type": "Object"
         }
       ]
     },
